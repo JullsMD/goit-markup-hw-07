@@ -1,0 +1,44 @@
+/* Чем мы занимаемся */
+
+.section-title {
+    margin-bottom: 50px;
+  
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+  
+  .wwd-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .img-thumb img {
+    display: block;
+  }
+  
+  .img-thumb {
+    position: relative;
+  }
+  .img-description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100%;
+    min-height: 70px;
+  
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+  
+    background-color: var(--wwd-img-description);
+    color: var(--primary-background-color);
+  }
