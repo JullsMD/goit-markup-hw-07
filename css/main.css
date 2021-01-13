@@ -66,6 +66,7 @@ p {
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
+  outline: 1px solid red;
 }
 
 .section {
@@ -483,7 +484,7 @@ p {
   text-decoration-skip-ink: none;
 }
 
-/* Особенности */
+/* Преимущества */
 .features {
   padding-top: 94px;
 }
@@ -495,6 +496,14 @@ p {
 .features-list__item {
   width: calc(100% / 4 -1 * var(--features-list-gap));
   margin-left: var(--features-list-gap);
+}
+
+.features-list__item:last-child {
+  margin-left: var(--features-list-half-gap);
+}
+
+.features-list__item:first-child {
+  margin-left: 0;
 }
 
 .features-list__title {

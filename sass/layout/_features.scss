@@ -1,4 +1,4 @@
-/* Особенности */
+/* Преимущества */
 
 .features {
   padding-top: 94px;
@@ -9,7 +9,15 @@
 .features-list__item {
   width: calc(100% / 4 -1 * var(--features-list-gap));
   margin-left: var(--features-list-gap);
-}
+  
+  &:last-child {
+   margin-left: var(--features-list-half-gap);
+  }
+   &:first-child {
+     margin-left: 0;
+   }
+  }
+  
 .features-list__title {
   font-size: 14px;
   line-height: 1.14;
@@ -24,7 +32,6 @@
 
   color: var(--secondary-text-color);
 }
-
 .features-list__icon {
   display: flex;
   justify-content: center;
