@@ -1,4 +1,5 @@
 :root {
+  // цвета
     --accent-color: #2196f3;
     --btn-active: #188ce8;
     --logo-text-color: #000000;
@@ -18,8 +19,12 @@
     --input-border: rgba(255, 255, 255, 0.3);
     --form-comment: rgba(117, 117, 117, 0.5);
     --form-border: rgba(33, 33, 33, 0.2);
-  
+  // отступы
     --card-set-gap: 30px;
     --features-list-gap: 30px;
+    --features-list-half-gap: 15px;
     --team-list-gap: 30px;
-  }
+    // шрифты
+    --main-font: Roboto, sans-serif;
+    --secondary-font: Raleway, sans-serif;
+}

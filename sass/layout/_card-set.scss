@@ -8,13 +8,15 @@
     padding-top: 94px;
     padding-bottom: 50px;
   }
-  .filter-list .item {
+  .filter-list__item {
     margin-right: 8px;
+  
+    &:last-child {
+      margin-right: 0;
+    }
   }
-  .filter-list .item:last-child {
-    margin-right: 0;
-  }
-  .filter-btn {
+
+  .filter-list__btn {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -33,11 +35,10 @@
     line-height: 1.63;
   
     background-color: var(--background-team-btn-icons);
-  }
   
-  .filter-btn:hover,
-  .filter-btn:focus,
-  .filter-btn:active {
+  &:hover,
+  &:focus,
+  &:active {
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
     box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
@@ -46,7 +47,7 @@
     color: var(--primary-background-color);
     border: 1px solid var(--accent-color);
   }
-  
+}
   /* Карточки */
   
   .card-set {
@@ -61,7 +62,7 @@
     margin-left: calc(-1 * var(--card-set-gap));
   }
   
-  .card-set > .item {
+  .card-set__item {
     display: flex;
     flex-basis: calc(100% / 3 - 1 * var(--card-set-gap));
   
@@ -73,7 +74,7 @@
   
   /* Card */
   
-  .card {
+  .card-set__link {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
       border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
@@ -81,32 +82,39 @@
     border: 1px solid transparent;
   
     color: inherit;
-  }
-  .card:hover,
-  .card:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-    border: 1px solid var(--border-card);
-  }
   
-  .card-img {
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+      border: 1px solid var(--border-card);
+    }
+
+    &:hover .card-set__overlay,
+    &:focus .card-set__overlay {
+      transform: translateY(0%);
+    }
+  }
+
+  .card-set__img {
     display: block;
     max-width: 100%;
+    
   }
-  .card-description {
+  .card-set__description {
     padding: 20px 24px;
     border-right: 1px solid var(--border-card);
     border-bottom: 1px solid var(--border-card);
     border-left: 1px solid var(--border-card);
   }
-  .card-title {
+  .card-set__title {
     font-weight: bold;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
   }
   
-  .card-text {
+  .card-set__text {
     margin-top: 4px;
   
     font-size: 16px;
@@ -117,7 +125,7 @@
   
   /* card-overlay */
   
-  .card-thumb {
+  .card-set__thumb {
     position: relative;
   
     padding: 0;
@@ -127,11 +135,11 @@
   
     font-size: 18px;
     line-height: 1.55;
+
+    
   }
-  .card-img {
-    display: block;
-  }
-  .card-overlay {
+
+  .card-set__overlay {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -150,8 +158,5 @@
     color: var(--primary-background-color);
   }
   
-  .card:hover .card-overlay,
-  .card:focus .card-overlay {
-    transform: translateY(0%);
-  }
+ 
   
