@@ -19,6 +19,7 @@
   --input-border: rgba(255, 255, 255, 0.3);
   --form-comment: rgba(117, 117, 117, 0.5);
   --form-border: rgba(33, 33, 33, 0.2);
+  --header-border: #ECECEC;
   --card-set-gap: 30px;
   --features-list-gap: 30px;
   --features-list-half-gap: 15px;
@@ -135,6 +136,10 @@ p {
 }
 
 /*  HEADER */
+.header {
+  border-bottom: 1px solid var(--header-border);
+}
+
 .page-header {
   display: flex;
   align-items: center;
@@ -787,14 +792,15 @@ p {
 /* Подписка */
 .subscribe {
   padding-top: 72px;
-  padding-bottom: 94px;
-  margin-left: 93px;
+  padding-bottom: 93px;
+  margin-left: auto;
 }
 
 .subscribe__slogan {
   display: block;
   width: 219px;
-  margin-left: 93px;
+  margin-right: auto;
+  margin-left: 0;
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
@@ -805,13 +811,13 @@ p {
 
 .subscribe__btn {
   display: flex;
-  margin-left: 93px;
 }
 
 .subscribe__input {
+  display: block;
   position: relative;
   width: 358px;
-  height: 50px;
+  min-height: 50px;
   margin-right: 12px;
   padding-left: 16px;
   padding-top: 15px;

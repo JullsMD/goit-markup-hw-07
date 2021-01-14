@@ -12,6 +12,8 @@
 .address {
     padding-top: 60px;
     padding-bottom: 60px;
+
+    // width: 231px;
   }
   
   .address__style {
@@ -114,15 +116,16 @@
 /* Подписка */
 .subscribe {
   padding-top: 72px;
-  padding-bottom: 94px;
-  margin-left: 93px;
+  padding-bottom: 93px;
+  margin-left: auto;
 }
   
   .subscribe__slogan {
     display: block;
   
     width: 219px;
-    margin-left: 93px;
+    margin-right: auto;
+    margin-left: 0;
     margin-bottom: 20px;
   
     font-weight: bold;
@@ -135,12 +138,14 @@
   
   .subscribe__btn {
     display: flex;
-    margin-left: 93px;
   }
   .subscribe__input {
+    display: block;
+
     position: relative;
     width: 358px;
-    height: 50px;
+    min-height: 50px;
+
     margin-right: 12px;
     padding-left: 16px;
     padding-top: 15px;
@@ -152,6 +157,7 @@
     
     color: var(--footer-text-color);
     background-color: var(--secondary-background-color);
+   
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
     border-radius: 4px;
